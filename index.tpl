@@ -1,11 +1,8 @@
 {include file="./header.tpl" class="static-layout"}
 <div class="wrapper wrapper-loggedin">
     <div class="wrapper-container">
-        <!--right menu -->
-        {speed render="module" name="menu" view="right"}
-        <!--/right menu-->
         <!--top menu -->
-        {speed render="module" name="menu" view="topnav" inverse="true"}
+        {speed render="module" name="menu" menu="usermenu"}
         <!--/top menu-->
         <!--components -->
         <div class="wrapper-loggedin-content">

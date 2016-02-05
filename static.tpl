@@ -1,11 +1,8 @@
 {include file="./header.tpl"}
 <div class="wrapper static-body">
     <div class="wrapper-container">
-        <!--right menu -->
-        {speed render="module" name="menu" view="right"}
-        <!--/right menu-->
         <!--top menu -->
-        {speed render="module" name="menu" view="topnav" inverse="true"}
+        {speed render="module" name="menu" menu="usermenu"}
         <!--/top menu-->
         <!--components -->
         <div class="hero hero-small stripe">
@@ -18,7 +15,6 @@
             </div>
         </section>
         <!--/components-->
-        {speed render="module" name="wellness" view="footer"}
     </div>
 </div>
 {include file="./footer.tpl"}
