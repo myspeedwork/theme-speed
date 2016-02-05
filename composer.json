@@ -16,10 +16,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "bower install bootstrap-sass#3.3.6 -FSp",
+            "bower install bootstrap-sass#3.3.6 -FSp"
         ],
         "post-update-cmd": [
-            "bower update bootstrap-sass#3.3.6 -FSp",
+            "bower update bootstrap-sass#3.3.6 -FSp"
         ]
     }
 }
