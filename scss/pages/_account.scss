@@ -1,0 +1,49 @@
+.avatar-croping {
+    width: 650px;
+    height: 480px;
+    overflow: auto;
+    background-color: #fff;
+    vertical-align: middle;
+    text-align: center;
+    .btn {
+        margin-top: 20px;
+    }
+}
+
+.user-profile-details {
+  .tab-content {
+    min-height: 400px;
+  }
+    .tab-pane {
+        &.tab-layout {
+            padding-top: 20px;
+            h2 {
+              margin-top: 0px;
+              margin-bottom: 0;
+              border-bottom: 1px solid $border-color;
+              padding: 0px;
+              padding-bottom: 5px;
+              i {
+                font-size: 28px;
+                &.fa {
+                  font-size: 22px;
+                }
+              }
+              .label {
+                font-size: $font-size-base - 2;
+                vertical-align: middle;
+              }
+            }
+          .shadow {
+            @include css3-prefix('box-shadow', 'none');
+            @include border-radius(0px);
+            &.shadow-content {
+              padding: 0px;
+            }
+            &.shadow-padding {
+              padding: 5px;
+            }
+          }          
+        }
+    }
+}

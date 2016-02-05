@@ -1,0 +1,112 @@
+.content-header {
+    padding: 15px;
+    background: #fff;
+    @include css3-prefix("box-shadow", 0 0 3px #E1DEDE);
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.wrapper.static-body {
+    background-color: $content-bg;
+    &.static-style {
+        .hero {
+            height: 120px !important;
+        }
+        .navbar-fixed-top {
+            position: absolute;
+        }
+        .context-widget {
+            padding: 60px;
+        }
+    }
+    .context-widget {
+        background-color: #fff;
+        box-shadow: 0px 0px 1px 1px #d7d7d7;
+        border-radius: 5px;
+        padding: 30px;
+        margin-bottom: 30px;
+    }
+    .header {
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+    .hero {
+        min-height: 100px;
+        margin-bottom: 20px;
+        &.hero-small {
+            height: 180px;
+        }
+        .header {
+            color: #fff;
+        }
+        &.stripe {
+            border-bottom: 20px solid #fff;
+            @include css3-prefix("box-shadow", 0 0 3px #E1DEDE);
+        }
+    }
+}
+
+.faq-list {
+    .faq-body {
+        margin-bottom: 10px;
+        i {
+            float: left;
+            font-size: 20px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+        .question {
+            padding-bottom: 8px;
+            font-size: 13px;
+            font-weight: bold;
+            display: block;
+        }
+        p {
+            clear: both;
+        }
+    }
+    .answer {
+        display: none;
+        position: relative;
+        border: 1px solid #E5E5E5;
+        background-color: #FAFAFA;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        &:after {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 15px 15px;
+            border-color: #FAFAFA transparent;
+            display: block;
+            width: 0;
+            z-index: 1;
+            top: -15px;
+            left: 40px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            border-style: solid;
+            border-width: 0 15px 15px;
+            border-color: #E5E5E5 transparent;
+            display: block;
+            width: 0;
+            z-index: 0;
+            top: -16px;
+            left: 40px;
+        }
+    }
+}
+
+.general-bg {
+    background-image: url(../images/bg/bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.confirm-tip-content {
+    width: 450px;
+}

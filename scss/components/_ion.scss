@@ -1,0 +1,129 @@
+$ionicons-prefix: ion !default;
+$ion-inverse:          #fff !default;
+$ion-font-size-base:   14px !default;
+
+.#{$ionicons-prefix} {
+  display: inline-block;
+  font-size: inherit; // can't have font-size inherit on line above, so need to override
+  text-rendering: auto; // optimizelegibility throws things off #1094
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0); // ensures no half-pixel rendering in firefox
+}
+
+
+@mixin ion-icon-rotate($degrees, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: rotate($degrees);
+      -ms-transform: rotate($degrees);
+          transform: rotate($degrees);
+}
+
+@mixin ion-icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+      -ms-transform: scale($horiz, $vert);
+          transform: scale($horiz, $vert);
+}
+
+// Spinning Icons
+// --------------------------
+
+.#{$ionicons-prefix}-spin {
+  -webkit-animation: ion-spin 2s infinite linear;
+          animation: ion-spin 2s infinite linear;
+}
+
+.#{$ionicons-prefix}-pulse {
+  -webkit-animation: ion-spin 1s infinite steps(8);
+          animation: ion-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes ion-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes ion-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+// Fixed Width Icons
+// -------------------------
+.#{$ionicons-prefix}-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
+/* makes the font 33% larger relative to the icon container */
+.#{$ionicons-prefix}-lg {
+  font-size: 20px;
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+.#{$ionicons-prefix}-2x { font-size: 3em; }
+.#{$ionicons-prefix}-3x { font-size: 4em; }
+.#{$ionicons-prefix}-4x { font-size: 5em; }
+.#{$ionicons-prefix}-5x { font-size: 6em; }
+
+// Fixed Width Icons
+// -------------------------
+.#{$ionicons-prefix}-fw {
+  width: (18em / 14);
+  text-align: center;
+}
+
+// Stacked Icons
+// -------------------------
+
+.#{$ionicons-prefix}-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.#{$ionicons-prefix}-stack-1x, .#{$ionicons-prefix}-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.#{$ionicons-prefix}-stack-1x { line-height: inherit; }
+.#{$ionicons-prefix}-stack-2x { font-size: 2em; }
+.#{$ionicons-prefix}-inverse { color: $ion-inverse; }
+
+// Rotated & Flipped Icons
+// -------------------------
+
+.#{$ionicons-prefix}-rotate-90  { @include ion-icon-rotate(90deg, 1);  }
+.#{$ionicons-prefix}-rotate-180 { @include ion-icon-rotate(180deg, 2); }
+.#{$ionicons-prefix}-rotate-270 { @include ion-icon-rotate(270deg, 3); }
+
+.#{$ionicons-prefix}-flip-horizontal { @include ion-icon-flip(-1, 1, 0); }
+.#{$ionicons-prefix}-flip-vertical   { @include ion-icon-flip(1, -1, 2); }
+
+// Hook for IE8-9
+// -------------------------
+
+:root .#{$ionicons-prefix}-rotate-90,
+:root .#{$ionicons-prefix}-rotate-180,
+:root .#{$ionicons-prefix}-rotate-270,
+:root .#{$ionicons-prefix}-flip-horizontal,
+:root .#{$ionicons-prefix}-flip-vertical {
+  filter: none;
+}

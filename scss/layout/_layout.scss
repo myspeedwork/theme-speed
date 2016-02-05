@@ -1,0 +1,32 @@
+.wrapper-content-heading {
+    margin-top: 10px;
+    padding-bottom: 0px;
+    h2 {
+      padding-top: 0px;
+      margin-top: 0px;
+      .label {
+        font-size: $font-size-base - 2;
+        vertical-align: middle;
+      }
+    }
+}
+
+.wrapper-loggedin-content {
+    margin: 30px;
+    margin-top: 100px;
+}
+
+.navbar-floated {
+    .noty-count {
+        position: relative;
+        i {
+            font-size: 18px;
+        }
+        .badge {
+            position: absolute;
+            top:-5px;
+            right: 0px;
+            background-color: $third-color;
+        }
+    }
+}

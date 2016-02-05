@@ -1,0 +1,39 @@
+.uploader
+{
+    border: 2px dashed #A5A5C7;
+    color: #92AAB0;
+    text-align: center;
+    vertical-align: middle;
+    padding: 70px;
+    padding-top: 100px;
+    margin: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+    cursor: pointer;
+    background: #F6F6F6;
+    height: 250px;
+    position: relative;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    input {
+        position: absolute;
+        top: 0;
+        right: 0px;
+    }
+    &.uploader-small {
+        height: 100px;
+        padding-top: 30px;
+        margin: 10px;
+    }
+}
+
+.uploader-input {
+    position: absolute;
+    left: -1000px;
+}

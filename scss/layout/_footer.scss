@@ -1,0 +1,70 @@
+#footer {
+    background: $footer-bg;
+    border-top:1px solid darken($footer-bg, 8);
+    color:$footer-color;
+    margin-top: 20px;
+    a {
+        padding: 6px;
+        text-decoration: none;
+        color: $footer-color;
+        &:hover {
+            color: darken($footer-color, 15);
+        }
+    }
+    &.footer-inverse {
+        background:$footer-color;
+        color: $footer-bg;
+        border-top:1px solid darken($footer-color, 8);
+        a {
+            color: $footer-bg;
+            &:hover {
+                color: darken($footer-bg, 15);
+            }
+        }
+    }
+    p {
+        padding-top:6px;
+        margin:0px;
+    }
+    &.footer-small{
+        .container {
+            padding: 20px;
+        }
+    }
+    .container {
+        padding: 10px;
+        text-align: center;
+    }
+    .links {
+        font-size: 11px;
+        display: inline-block;
+        margin-top: 5px;
+        ul {
+            display: inline;
+            li {
+                list-style-type: none;
+                float: left;
+                border-right: 1px solid darken($footer-bg, 10);
+                &:last-child {
+                    border:none;
+                }
+            }
+
+        }
+    }
+    .socials-simple {
+        margin-bottom: 0px;
+        display: inline-block;
+        a {
+            padding-left:0px;
+            padding-right: 5px;
+            > i {
+            font-size: 20px;
+            }
+        } 
+    }
+    input[type="text"], input[type="email"] {
+        background: darken($footer-bg, 2);
+        border:1px solid darken($footer-bg, 5);
+    }
+}
