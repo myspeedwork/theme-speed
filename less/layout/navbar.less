@@ -1,0 +1,201 @@
+.navbar-fixed {
+  .navbar-fixed-top {
+      position: relative !important;
+    }
+  .top-nav-strip {
+    display: none;
+  }
+  .hero {
+    height: 550px;
+    .container {
+      padding-top: 100px;
+    }
+  }
+}
+.navbar {
+    background-color: @nav-bg;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    margin-bottom: 0px;
+    .transition(all 0.3s);
+    .navbar-brand {
+        img {
+            margin: 10px;
+            height: 80px;
+        }
+    }
+    &.navbar-default {
+      background: transparent;
+      border:none;
+      .navbar-brand {
+        background-image: url(../images/logo.png);
+      }
+      .navbar-nav {
+        .dropdown {
+          &.open {
+            >a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    &.navbar-inverse {
+      box-shadow: 0 1px 1px -3px rgba(0, 0, 0, 0.12);
+      .navbar-brand {
+        background-image: url(../images/logo.png);
+      }
+      .navbar-nav {
+        > .active > a {
+          &:hover,
+          &:focus {
+            color: @fourth-color;
+          }
+        }
+        .dropdown {
+          >a {
+            padding-right:20px;
+          }
+          &.open {
+            >a {
+              &:focus,
+              &:hover {
+                background-color: transparent;
+              }
+            }
+          }
+          >a:before {
+            font-family: 'FontAwesome';
+            content: "\f107";
+            position: absolute;
+            left: auto;
+            top: 7px;
+            right:4px;
+            line-height: 1;
+            color: #fff;
+          }
+        }
+      }
+      .navbar_separator {
+          border-left: 1px solid #eee;
+          height: 23px;
+          .transition(border-color 0.3s);
+      }
+    }
+    .navbar-brand {
+        background-size: 140px;
+        background-repeat: no-repeat;
+        background-position: 10px 15px;
+        display: inline-block;
+        width: 180px;
+    }
+    .navbar-nav {
+      > li {
+          padding-top: 37px;
+          padding-bottom: 15px;
+          padding-right: 5px;
+        > a {
+          padding-top: 0px;
+          padding-bottom: 0px;
+          padding: 5px 10px;
+          font-weight: 600;
+          &.focus {
+            color: @fourth-color;
+            background-color: #fff;
+            border-radius: 10px;
+            &:hover {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      .navbar-text {
+        margin-top: 9px;
+      }
+      .navbar_separator {
+          border-left: 1px solid #eee;
+          height: 15px;
+          .transition(border-color 0.3s);
+      }
+    }
+}
+
+.navbar-floated {
+    .navbar-inverse {
+        background-color: @navbar-inverse-bg;
+        border-color: @navbar-inverse-border-color;
+        height: 80px;
+        .container {
+            margin-top: 5px;
+        }
+        .navbar-brand {
+          background-size: @navbar-brand-size;
+          height: @navbar-brand-size/2;
+          width: @navbar-brand-size + 20px;
+          margin-top: 10px;
+        }
+      .navbar-nav {
+        height: 50px;
+        > li {
+          padding-top:23px;
+          > a {
+            font-weight: 600;
+            color: #525252;
+            background-color: transparent !important;
+            &.focus {
+              color: #fff;
+              background-color: @primary !important;
+              border-radius: 10px;
+              &:hover {
+                background-color: fade(@primary, 0.6) !important;
+                color: #fff;
+              }
+            }
+            &:hover,
+            &:focus {
+              color: darken(@gray-dark, 20);
+              background-color: transparent !important;
+            }
+          }
+          .navbar-text {
+            margin-top: 9px;
+          }
+        }
+        .dropdown-menu {
+          min-width: 200px;
+        }
+      }
+    }
+    .navbar {
+      min-height: 50px;
+    }
+}
+
+.top-nav-strip {
+  .socials-simple {
+    padding-top: 5px;
+    i {
+      font-size: 18px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .l-page {
+      padding-right: 25px;
+  }
+  .top-site-nav {
+    float: right;
+    .navbar-nav > li > a {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      &:hover{
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+.with-navbar {
+    padding-top: 100px;
+}
