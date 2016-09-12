@@ -1,0 +1,103 @@
+.static-layout{
+    background: #f3f3f3;
+}
+.form-well {
+    min-height: 0px !important;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: table;
+    .logo {
+        text-align: center;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        img {
+            width: 150px;
+        }
+    }
+}
+
+.form-well-container {
+    .form-well-container {
+        padding: 0px !important;
+        width: auto !important;
+    }
+    padding: 30px;
+    width: 600px;
+    .on-input {
+        float: right;
+        position: absolute;
+        right: 25px;
+        top: 6px;
+    }
+    .col-sm-4 {
+        padding-right: 0;
+    }
+    .control-label {
+        padding-right: 0;
+    }
+    .header {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    .table-layout {
+        display: flex;
+        table-layout: fixed;
+        .table-cell{
+            display: table-cell;
+            &.middle {
+                margin:auto;
+                vertical-align: middle;
+            }
+        }
+    }
+    .or {
+        border-radius: 50%;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: @third-color;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        vertical-align: middle;
+        padding: 5px;
+    }
+    .vertical-border {
+        position: relative;
+        &:before {
+          top: 0px;
+          bottom: 0;
+          left: 30px;
+          position: absolute;
+          content: " ";
+          width: 1px;
+          height: 100%;
+          border-right: 1px solid @border-color;
+        }
+        .or {
+            position: absolute;
+            top: 46%;
+        }
+    }
+}
+
+.qtip-content {
+    .form-well-container {
+        padding: 10px;
+        .form-horizontal {
+            min-width: auto !important;
+        }
+    }
+}
+
+#option-account {
+    .form-well-container {
+        width: 800px;
+        h2 {
+            margin-top: 0;
+            text-align: center;
+        }
+    }
+}

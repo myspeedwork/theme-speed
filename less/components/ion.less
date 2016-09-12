@@ -1,8 +1,7 @@
-$ionicons-prefix: ion !default;
-$ion-inverse:          #fff !default;
-$ion-font-size-base:   14px !default;
+@ion-inverse:          #fff !default;
+@ion-font-size-base:   14px !default;
 
-.#{$ionicons-prefix} {
+.ion {
   display: inline-block;
   font-size: inherit; // can't have font-size inherit on line above, so need to override
   text-rendering: auto; // optimizelegibility throws things off #1094
@@ -12,29 +11,29 @@ $ion-font-size-base:   14px !default;
 }
 
 
-@mixin ion-icon-rotate($degrees, $rotation) {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
-  -webkit-transform: rotate($degrees);
-      -ms-transform: rotate($degrees);
-          transform: rotate($degrees);
+.ion-icon-rotate(@degrees, @rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@rotation);
+  -webkit-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+          transform: rotate(@degrees);
 }
 
-@mixin ion-icon-flip($horiz, $vert, $rotation) {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
-  -webkit-transform: scale($horiz, $vert);
-      -ms-transform: scale($horiz, $vert);
-          transform: scale($horiz, $vert);
+.ion-icon-flip(@horiz, @vert, @rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@rotation);
+  -webkit-transform: scale(@horiz, @vert);
+      -ms-transform: scale(@horiz, @vert);
+          transform: scale(@horiz, @vert);
 }
 
 // Spinning Icons
 // --------------------------
 
-.#{$ionicons-prefix}-spin {
+.ion-spin {
   -webkit-animation: ion-spin 2s infinite linear;
           animation: ion-spin 2s infinite linear;
 }
 
-.#{$ionicons-prefix}-pulse {
+.ion-pulse {
   -webkit-animation: ion-spin 1s infinite steps(8);
           animation: ion-spin 1s infinite steps(8);
 }
@@ -63,25 +62,25 @@ $ion-font-size-base:   14px !default;
 
 // Fixed Width Icons
 // -------------------------
-.#{$ionicons-prefix}-fw {
+.ion-fw {
   width: (18em / 14);
   text-align: center;
 }
 
 /* makes the font 33% larger relative to the icon container */
-.#{$ionicons-prefix}-lg {
+.ion-lg {
   font-size: 20px;
   line-height: (3em / 4);
   vertical-align: -15%;
 }
-.#{$ionicons-prefix}-2x { font-size: 3em; }
-.#{$ionicons-prefix}-3x { font-size: 4em; }
-.#{$ionicons-prefix}-4x { font-size: 5em; }
-.#{$ionicons-prefix}-5x { font-size: 6em; }
+.ion-2x { font-size: 3em; }
+.ion-3x { font-size: 4em; }
+.ion-4x { font-size: 5em; }
+.ion-5x { font-size: 6em; }
 
 // Fixed Width Icons
 // -------------------------
-.#{$ionicons-prefix}-fw {
+.ion-fw {
   width: (18em / 14);
   text-align: center;
 }
@@ -89,7 +88,7 @@ $ion-font-size-base:   14px !default;
 // Stacked Icons
 // -------------------------
 
-.#{$ionicons-prefix}-stack {
+.ion-stack {
   position: relative;
   display: inline-block;
   width: 2em;
@@ -97,33 +96,33 @@ $ion-font-size-base:   14px !default;
   line-height: 2em;
   vertical-align: middle;
 }
-.#{$ionicons-prefix}-stack-1x, .#{$ionicons-prefix}-stack-2x {
+.ion-stack-1x, .ion-stack-2x {
   position: absolute;
   left: 0;
   width: 100%;
   text-align: center;
 }
-.#{$ionicons-prefix}-stack-1x { line-height: inherit; }
-.#{$ionicons-prefix}-stack-2x { font-size: 2em; }
-.#{$ionicons-prefix}-inverse { color: $ion-inverse; }
+.ion-stack-1x { line-height: inherit; }
+.ion-stack-2x { font-size: 2em; }
+.ion-inverse { color: @ion-inverse; }
 
 // Rotated & Flipped Icons
 // -------------------------
 
-.#{$ionicons-prefix}-rotate-90  { .ion-icon-rotate(90deg, 1);  }
-.#{$ionicons-prefix}-rotate-180 { .ion-icon-rotate(180deg, 2); }
-.#{$ionicons-prefix}-rotate-270 { .ion-icon-rotate(270deg, 3); }
+.ion-rotate-90  { .ion-icon-rotate(90deg, 1);  }
+.ion-rotate-180 { .ion-icon-rotate(180deg, 2); }
+.ion-rotate-270 { .ion-icon-rotate(270deg, 3); }
 
-.#{$ionicons-prefix}-flip-horizontal { .ion-icon-flip(-1, 1, 0); }
-.#{$ionicons-prefix}-flip-vertical   { .ion-icon-flip(1, -1, 2); }
+.ion-flip-horizontal { .ion-icon-flip(-1, 1, 0); }
+.ion-flip-vertical   { .ion-icon-flip(1, -1, 2); }
 
 // Hook for IE8-9
 // -------------------------
 
-:root .#{$ionicons-prefix}-rotate-90,
-:root .#{$ionicons-prefix}-rotate-180,
-:root .#{$ionicons-prefix}-rotate-270,
-:root .#{$ionicons-prefix}-flip-horizontal,
-:root .#{$ionicons-prefix}-flip-vertical {
+:root .ion-rotate-90,
+:root .ion-rotate-180,
+:root .ion-rotate-270,
+:root .ion-flip-horizontal,
+:root .ion-flip-vertical {
   filter: none;
 }

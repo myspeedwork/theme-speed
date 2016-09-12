@@ -1,0 +1,123 @@
+.ion {
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+.ion-spin {
+  -webkit-animation: ion-spin 2s infinite linear;
+  animation: ion-spin 2s infinite linear;
+}
+.ion-pulse {
+  -webkit-animation: ion-spin 1s infinite steps(8);
+  animation: ion-spin 1s infinite steps(8);
+}
+@-webkit-keyframes ion-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes ion-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.ion-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+/* makes the font 33% larger relative to the icon container */
+.ion-lg {
+  font-size: 20px;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.ion-2x {
+  font-size: 3em;
+}
+.ion-3x {
+  font-size: 4em;
+}
+.ion-4x {
+  font-size: 5em;
+}
+.ion-5x {
+  font-size: 6em;
+}
+.ion-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+.ion-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+.ion-stack-1x,
+.ion-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+.ion-stack-1x {
+  line-height: inherit;
+}
+.ion-stack-2x {
+  font-size: 2em;
+}
+.ion-inverse {
+  color: #fff !default;
+}
+.ion-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ion-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.ion-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.ion-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.ion-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+:root .ion-rotate-90,
+:root .ion-rotate-180,
+:root .ion-rotate-270,
+:root .ion-flip-horizontal,
+:root .ion-flip-vertical {
+  filter: none;
+}
