@@ -3,23 +3,15 @@
     "type": "speedwork-theme",
     "description": "Theme for speedwork",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Sankar Suda",
-            "email": "sankar.suda@gmail.com"
-        }
-    ],
+    "authors": [{
+        "name": "Sankar Suda",
+        "email": "sankar.suda@gmail.com"
+    }],
     "minimum-stability": "dev",
-    "preferred-install": "dist",
-    "extra" : {
-        "name" : "speed"
-    },
-    "scripts": {
-        "post-install-cmd": [
-            "bower install bootstrap-sass#3.3.6 -FSp"
-        ],
-        "post-update-cmd": [
-            "bower update bootstrap-sass#3.3.6 -FSp"
-        ]
+    "extra": {
+        "name": "speed",
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
     }
 }
