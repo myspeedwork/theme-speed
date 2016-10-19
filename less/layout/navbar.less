@@ -117,36 +117,60 @@
           .transition(border-color 0.3s);
       }
     }
+    .badge {
+        position: absolute;
+        top: -5px;
+        right: 10px;
+        padding: 4px;
+        font-size: 10px;
+        border-radius: 100px;
+        background-color: @brand-primary;
+    }
+    .navbar-avatar {
+        img {
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            margin-top: -@navbar-avatar-size/2;
+            width: @navbar-avatar-size;
+            border: 1px solid @border-color;
+            border-radius: 10px;
+        }
+        i {
+            padding-left:@navbar-avatar-size;
+        }
+
+    }
 }
 
 .navbar-floated {
     .navbar-inverse {
         background-color: @navbar-inverse-bg;
         border-color: @navbar-inverse-border-color;
-        height: 80px;
+        height: 70px;
         .container {
             margin-top: 5px;
         }
         .navbar-brand {
           background-size: @navbar-brand-size;
-          height: @navbar-brand-size/2;
-          width: @navbar-brand-size + 20px;
-          margin-top: 10px;
+          height: @navbar-brand-size/1.5;
+          width: @navbar-brand-size + 40px;
+          margin-top: 0px;
         }
       .navbar-nav {
         height: 50px;
         > li {
-          padding-top:23px;
+          padding-top:15px;
           > a {
             font-weight: 600;
             color: #525252;
             background-color: transparent !important;
             &.focus {
               color: #fff;
-              background-color: @primary !important;
+              background-color: @brand-primary !important;
               border-radius: 10px;
               &:hover {
-                background-color: fade(@primary, 0.6) !important;
+                background-color: fade(@brand-primary, 0.6) !important;
                 color: #fff;
               }
             }
@@ -168,32 +192,6 @@
     .navbar {
       min-height: 50px;
     }
-}
-
-.top-nav-strip {
-  .socials-simple {
-    padding-top: 5px;
-    i {
-      font-size: 18px;
-      &:hover {
-        color: #fff;
-      }
-    }
-  }
-  .l-page {
-      padding-right: 25px;
-  }
-  .top-site-nav {
-    float: right;
-    .navbar-nav > li > a {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      padding-right: 10px;
-      &:hover{
-        background-color: transparent !important;
-      }
-    }
-  }
 }
 
 .with-navbar {

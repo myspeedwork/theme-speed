@@ -1,56 +1,37 @@
-
 .form-control-inline {
     min-width: 0;
     width: auto !important;
     display: inline-block !important;
 }
-
 .input-group-field {
     display: table-cell;
     vertical-align: middle;
     border-radius: 4px;
+
+    .form-control {
+        border-radius: inherit !important;
+        margin: 0px !important;
+    }
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    &:not(:first-child), &:not(:last-child) {
+        border-radius: 0;
+        .form-control {
+            border-left-width: 0;
+            border-right-width: 0;
+        }
+    }
 }
-
-.input-group-field .form-control {
-    border-radius: inherit !important;
-    margin: 0px !important;
+.star {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url(data:image/gif;base64,R0lGODlhDAAMAMQRAP9gYP+AgP8QEP+/v/9AQP+fn/9QUP/f3/9wcP+vr/+Pj//v7/8gIP8wMP/Pz/8AAP///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAABEALAAAAAAMAAwAAAVJYCSKzjKe5GOg0eJEzkOIw9g8CMQUDvMkIsXjEUA4boxDBAJZJACChsIBETGdUCmVGRESjchD9Zbb9X4iF0zFrKFiBi4rUhCfQgA7) no-repeat;
 }
-
-.input-group-field:not(:first-child):not(:last-child) {
-    border-radius: 0;
-}
-
-.input-group-field:not(:first-child):not(:last-child) .form-control {
-    border-left-width: 0;
-    border-right-width: 0;
-}
-
-.input-group-field:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.form-general.table td {
-    padding: 3px!important;
-    padding-right: 10px !important;
-}
-
-.form-general.table td strong {
-    padding-left: 10px !important;
-}
-
-.star {display: inline-block; width: 10px; height: 10px; background: url(../images/asterisk.gif) no-repeat; }
-
 .form-general {
-    input[type=text],
-    input[type=password],
-    input[type=url],
-    input[type=number],
-    input[type=date],
-    input[type=file],
-    input[type=email],
-    textarea,
-    select  {
+    input[type=text], input[type=password], input[type=url], input[type=number], input[type=date], input[type=file], input[type=email], textarea, select {
         width: 100%;
         font-size: 12px;
         color: #434a54;
@@ -63,31 +44,38 @@
         background-color: #fff;
         border: 1px solid #ccc;
         border-radius: 4px;
-        box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
         .transition("border-color ease-in-out .15s");
-        margin:3px;
+        margin: 3px;
     }
     .bootstrap-tagsinput {
         width: 100%;
+
         input {
-            border:none;
+            border: none;
             margin: 0px !important;
             padding: 0px !important;
             width: 200px;
             box-shadow: none;
         }
     }
-}
+    .table td {
+        padding: 3px !important;
+        padding-right: 10px !important;
 
+        strong {
+            padding-left: 10px !important;
+        }
+    }
+}
 input:required, textarea:required, .must {
-    background-image: url(../images/asterisk.gif);
+    background-image: url(data:image/gif;base64,R0lGODlhDAAMAMQRAP9gYP+AgP8QEP+/v/9AQP+fn/9QUP/f3/9wcP+vr/+Pj//v7/8gIP8wMP/Pz/8AAP///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAABEALAAAAAAMAAwAAAVJYCSKzjKe5GOg0eJEzkOIw9g8CMQUDvMkIsXjEUA4boxDBAJZJACChsIBETGdUCmVGRESjchD9Zbb9X4iF0zFrKFiBi4rUhCfQgA7) no-repeat;
     background-repeat: no-repeat;
     background-position: 98% center;
     background-size: 10px;
 }
-
 .form-control-hold {
-    input, select{
+    input, select {
         width: 100%;
         display: block;
     }
@@ -95,11 +83,9 @@ input:required, textarea:required, .must {
         width: 100% !important;
     }
 }
-
 .table td {
     vertical-align: middle !important;
 }
-
 .error {
     background-color: #FFFE36;
     font-size: 11px;
@@ -108,9 +94,10 @@ input:required, textarea:required, .must {
     color: #000;
     display: none;
     border-radius: 4px;
-    box-shadow :0 0 6px #ddd;
+    box-shadow: 0 0 6px #ddd;
     cursor: pointer;
     z-index: 99999;
+
     p {
         margin: 0px;
     }
@@ -125,7 +112,6 @@ input:required, textarea:required, .must {
         width: 0;
     }
 }
-
 .form-horizontal {
     &.form-blocked {
         .control-label {
@@ -144,15 +130,14 @@ input:required, textarea:required, .must {
         }
     }
 }
-
 .form-horizontal {
-     .control-text {
+    .control-text {
         text-align: left;
         margin-bottom: 0;
         padding-top: 7px;
     }
     .control-link {
-        color:@gray-dark;
+        color: @gray-dark;
         text-decoration: underline;
     }
     .form-group {
@@ -160,7 +145,6 @@ input:required, textarea:required, .must {
         margin-right: 0;
     }
 }
-
 .control-label-empty {
     height: 35px;
 }

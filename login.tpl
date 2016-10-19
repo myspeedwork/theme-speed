@@ -1,9 +1,9 @@
-{include file="./header.tpl" class="static-layout"}
+{include file="./header.tpl"}
 <section class="form-well">
-    <div class="logo"><a href="{speed link="index.php"}"><img src="{$themeimages}logo.png"></a></div>
+    <div class="logo"><a href="{speed link="index.php"}"><img src="{$theme}images/logo.png"></a></div>
     <!--components -->
-    <section class="form-well-container shadow login">
-        {speed render="component" name="{$component[0]}" view="{$component[1]}"}
+    <section class="form-well-container login">
+        {speed render="component" name="{$component}"}
     </section>
     <!--/components-->
 </section>
